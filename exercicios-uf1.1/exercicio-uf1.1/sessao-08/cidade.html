@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Conheça os faróis históricos de Portugal, as normas de visita e agende a sua visita às lanternas das grandes sentinelas do Atlântico."
+    />
+    <meta name="author" content="Direção de Faróis" />
+    <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg" />
+    <link rel="stylesheet" href="css/farois.css" />
+    <title>Faróis de Portugal — As Grandes Sentinelas do Atlântico</title>
+  </head>
+  <body>
+    <header>
+      <img src="imagens/farol.svg" alt="Ilustração de um farol" />
+      <h1>Faróis de Portugal</h1>
+      <p>
+        Desde o século XVIII, os faróis guiam os navegantes ao longo de uma das
+        costas mais exigentes da Europa. Descubra a história destas sentinelas
+        e visite as suas lanternas.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#normas">Normas</a></li>
+          <li><a href="#tabela">Dados técnicos</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="destaques">
+        <h2>Destaques Costeiros</h2>
+        <article class="cartao">
+          <h3>Farol da Barra</h3>
+          <p>
+            Situado na Gafanha da Nazaré, junto à barra de Aveiro, é um dos
+            faróis mais altos do país e um símbolo da região.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3>Farol do Cabo da Roca</h3>
+          <p>
+            No ponto mais ocidental da Europa continental, em Sintra, vigia o
+            Atlântico desde o século XVIII sobre falésias imponentes.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3>Farol de Santa Marta</h3>
+          <p>
+            Em Cascais, guarda a entrada da foz do Tejo e pode ser visitado no
+            museu instalado no edifício.
+          </p>
+        </article>
+      </section>
+
+      <section id="normas">
+        <h2>Normas de Visita e Segurança</h2>
+        <aside class="aviso">
+          <p class="destaque">Leia atentamente antes de visitar:</p>
+          <ul>
+            <li>Use calçado fechado e sola antiderrapante.</li>
+            <li>Não é permitido subir à lanterna com tempo de vento forte.</li>
+            <li>Crianças menores de 12 anos só entram acompanhadas por adultos.</li>
+            <li>É proibido tocar nos equipamentos ópticos e elétricos.</li>
+            <li>Respeite os limites de lotação indicados em cada farol.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="tabela">
+        <h2>Dados Técnicos das Principais Sentinelas</h2>
+        <table>
+          <caption>
+            Características dos faróis em destaque
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Farol</th>
+              <th scope="col">Localização</th>
+              <th scope="col">Ano de entrada em serviço</th>
+              <th scope="col">Altura da torre</th>
+              <th scope="col">Alcance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Barra</th>
+              <td>Gafanha da Nazaré</td>
+              <td>1893</td>
+              <td>62 m</td>
+              <td>23 milhas</td>
+            </tr>
+            <tr>
+              <th scope="row">Cabo da Roca</th>
+              <td>Sintra</td>
+              <td>1772</td>
+              <td>22 m</td>
+              <td>26 milhas</td>
+            </tr>
+            <tr>
+              <th scope="row">Santa Marta</th>
+              <td>Cascais</td>
+              <td>1868</td>
+              <td>14 m</td>
+              <td>16 milhas</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="agendamento">
+        <h2>Agendar Visita às Lanternas</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Dados do responsável</legend>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" minlength="3" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="telemovel">Telemóvel</label>
+            <input
+              type="tel"
+              id="telemovel"
+              name="telemovel"
+              pattern="[0-9]{9}"
+              title="Introduza 9 dígitos, sem espaços"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Detalhes do agendamento</legend>
+            <label for="farol">Farol</label>
+            <select id="farol" name="farol" required>
+              <option value="">Selecione um farol</option>
+              <option value="barra">Farol da Barra</option>
+              <option value="cabo-da-roca">Farol do Cabo da Roca</option>
+              <option value="santa-marta">Farol de Santa Marta</option>
+            </select>
+
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required />
+
+            <p>Turno horário:</p>
+            <label class="inline">
+              <input type="radio" name="turno" value="manha" checked />
+              Manhã (10h–12h)
+            </label>
+            <label class="inline">
+              <input type="radio" name="turno" value="tarde" />
+              Tarde (14h–17h)
+            </label>
+
+            <label for="participantes">Número de participantes</label>
+            <input
+              type="number"
+              id="participantes"
+              name="participantes"
+              min="1"
+              max="10"
+              required
+            />
+
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" rows="4" cols="40"></textarea>
+
+            <label class="inline">
+              <input type="checkbox" name="normas" required />
+              Li e aceito as normas de visita e segurança
+            </label>
+          </fieldset>
+
+          <button type="submit" class="botao">Enviar pedido</button>
+          <button type="reset" class="botao botao-secundario">Limpar</button>
+        </form>
+      </section>
+
+      <section id="contactos">
+        <h2>Apoio ao Visitante e Contactos Institucionais</h2>
+        <p><strong>Organismo:</strong> Direção de Faróis</p>
+        <address>Paço de Arcos, Oeiras</address>
+        <p>
+          <a href="mailto:farois@example.pt">farois@example.pt</a>
+        </p>
+        <p>
+          <a
+            href="https://www.marinha.pt"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Portal da Marinha (abre em novo separador)</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Direção de Faróis. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
+   

@@ -1,0 +1,318 @@
+/* E/* Paleta: azul-escuro #0f172a / #1e3a8a, fundo #f1f5f9, branco #fff, realce dourado/vermelho */
+
+/* ===== Seletores de tipo ===== */STILOS GERAIS *
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: #334155;
+    margin: 0;
+    padding: 0;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+    color: #0f172a;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* LINKS E IMAGENS */
+a {
+    color: #1e40af;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1,
+header p {
+    color: #ffffff;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+/* CARTÕES */
+.cartao {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* DESTAQUES */
+.destaque {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+/* AVISOS E CURIOSIDADES */
+.aviso {
+    background-color: #fff7ed;
+    border-left: 5px solid #ea580c;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.curiosidade {
+    background-color: #fef3c7;
+    border-left: 5px solid #eab308;
+    padding: 15px;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    padding: 12px;
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+/* FORMULÁRIO */
+#agendamento {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* BOTÕES */
+.botao {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.botao:hover {
+    background-color: #172554;
+}
+
+.botao-secundario {
+    background-color: #64748b;
+}
+
+.botao-secundario:hover {
+    background-color: #475569;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+
+    footer  {
+    
+background-color: #0f172a;
+color: #ffffff;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+caption {
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+/* ===== Seletores descendentes ===== */
+nav ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0.6rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #facc15;
+}
+
+/* ===== Seletores de classe ===== */
+.cartao {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.destaque {
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+.aviso {
+  background-color: #fef2f2;
+  border-left: 6px solid #b91c1c;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+}
+
+.botao {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #0f172a;
+}
+
+.botao.botao-secundario {
+  background-color: #ffffff;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+}
+
+/* ===== Seletor de identificador ===== */
+#agendamento {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+#agendamento fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+#agendamento label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+#agendamento input[type="radio"] + label,
+#agendamento .inline {
+  display: inline;
+}

@@ -1,0 +1,813 @@
+/* ==========================================================================
+   Portefólio Pessoal — Ana Martins
+   Folha de Estilos Principal (mobile-first: primeiro o telemóvel,
+   depois os ecrãs maiores, na secção 7)
+   As cores e as medidas que se repetem estão em variáveis, no :root.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Base: caixas, corpo da página e largura do conteúdo
+   -------------------------------------------------------------------------- */
+
+/* Variáveis: a paleta e as medidas que se repetem, num só sítio.
+   Para mudar uma cor no site todo, basta mudá-la aqui. */
+:root {
+  --cor-principal: #0f766e;
+  --cor-principal-escura: #115e59;
+  --cor-principal-media: #99f6e4;
+  --cor-principal-clara: #f0fdfa;
+  --cor-titulos: #134e4a;
+  --cor-texto: #1f2937;
+  --cor-texto-secundario: #6b7280;
+  --cor-bordas: #e5e7eb;
+  --cor-bordas-campos: #d1d5db;
+  --cor-fundo: #f8fafc;
+  --cor-branca: #ffffff;
+  --cor-realce: #ea580c;
+  --cor-realce-clara: #fff7ed;
+  --raio: 12px;
+  --sombra: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --sombra-forte: 0 8px 20px rgba(15, 23, 42, 0.14);
+}*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+2. Texto e fontes
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-titulos);
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cor-principal-escura);
+  text-decoration: underline;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0 0 1.5rem 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+3. Cabeçalho, menu e rodapé
+   -------------------------------------------------------------------------- */
+
+header {
+  background-color: var(--cor-branca);
+  border-bottom: 1px solid var(--cor-bordas);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cor-titulos);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+nav a:hover {
+  color: var(--cor-principal);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--cor-branca);
+  border-top: 1px solid var(--cor-bordas);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.redes a {
+  font-weight: 500;
+  color: var(--cor-principal);
+}
+
+/* --------------------------------------------------------------------------
+4. Tabelas e formulários
+   -------------------------------------------------------------------------- */
+
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: var(--raio);
+  border: 1px solid var(--cor-bordas);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--cor-branca);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+caption {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--cor-titulos);
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cor-bordas);
+}
+
+th {
+  background-color: var(--cor-principal-clara);
+  color: var(--cor-titulos);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+fieldset {
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--cor-branca);
+}
+
+legend {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--cor-titulos);
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: var(--cor-texto);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--cor-bordas-campos);
+  border-radius: 8px;
+  background-color: var(--cor-branca);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px var(--cor-principal-media);
+}
+
+/* --------------------------------------------------------------------------
+5. Componentes reutilizáveis (classes)
+   -------------------------------------------------------------------------- */
+
+.cartao {
+  background-color: var(--cor-branca);
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-forte);
+}
+
+.curiosidade {
+  background-color: var(--cor-principal-clara);
+  border-left: 4px solid var(--cor-principal);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--raio) var(--raio) 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.destaque {
+  background-color: var(--cor-realce-clara);
+  border-left: 4px solid var(--cor-realce);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--raio) var(--raio) 0;
+  margin-bottom: 1.5rem;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-principal-escura);
+  color: var(--cor-branca);
+  text-decoration: none;
+}
+
+.etiquetas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etiquetas li {
+  background-color: var(--cor-principal-clara);
+  color: var(--cor-titulos);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.grelha-projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+6. Elementos únicos (id)
+   -------------------------------------------------------------------------- */
+
+#formulario-contacto {
+  background-color: var(--cor-branca);
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+/* --------------------------------------------------------------------------
+7. Ecrãs maiores (media queries)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header .logo {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+
+  .grelha-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cartao {
+    margin-bottom: 0;
+  }
+}*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+2. Texto e fontes
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-titulos);
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cor-principal-escura);
+  text-decoration: underline;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0 0 1.5rem 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+3. Cabeçalho, menu e rodapé
+   -------------------------------------------------------------------------- */
+
+header {
+  background-color: var(--cor-branca);
+  border-bottom: 1px solid var(--cor-bordas);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cor-titulos);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+nav a:hover {
+  color: var(--cor-principal);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--cor-branca);
+  border-top: 1px solid var(--cor-bordas);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.redes a {
+  font-weight: 500;
+  color: var(--cor-principal);
+}
+
+/* --------------------------------------------------------------------------
+4. Tabelas e formulários
+   -------------------------------------------------------------------------- */
+
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: var(--raio);
+  border: 1px solid var(--cor-bordas);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--cor-branca);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+caption {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--cor-titulos);
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cor-bordas);
+}
+
+th {
+  background-color: var(--cor-principal-clara);
+  color: var(--cor-titulos);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+fieldset {
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--cor-branca);
+}
+
+legend {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--cor-titulos);
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: var(--cor-texto);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--cor-bordas-campos);
+  border-radius: 8px;
+  background-color: var(--cor-branca);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px var(--cor-principal-media);
+}
+
+/* --------------------------------------------------------------------------
+5. Componentes reutilizáveis (classes)
+   -------------------------------------------------------------------------- */
+
+.cartao {
+  background-color: var(--cor-branca);
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-forte);
+}
+
+.curiosidade {
+  background-color: var(--cor-principal-clara);
+  border-left: 4px solid var(--cor-principal);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--raio) var(--raio) 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.destaque {
+  background-color: var(--cor-realce-clara);
+  border-left: 4px solid var(--cor-realce);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--raio) var(--raio) 0;
+  margin-bottom: 1.5rem;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-principal-escura);
+  color: var(--cor-branca);
+  text-decoration: none;
+}
+
+.etiquetas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etiquetas li {
+  background-color: var(--cor-principal-clara);
+  color: var(--cor-titulos);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.grelha-projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+6. Elementos únicos (id)
+   -------------------------------------------------------------------------- */
+
+#formulario-contacto {
+  background-color: var(--cor-branca);
+  border: 1px solid var(--cor-bordas);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+/* --------------------------------------------------------------------------
+7. Ecrãs maiores (media queries)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header .logo {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+
+  .grelha-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cartao {
+    margin-bottom: 0;
+  }
+}
+
+/* box-sizing para todos os elementos, body e main centrado */
+
+/* --------------------------------------------------------------------------
+   2. Texto e fontes
+   -------------------------------------------------------------------------- */
+
+/* Títulos com a Poppins, parágrafos, links, imagens, figure, video e figcaption */
+
+/* --------------------------------------------------------------------------
+   3. Cabeçalho, menu e rodapé
+   -------------------------------------------------------------------------- */
+
+/* header, menu com Flexbox, rodapé em coluna e lista .redes */
+
+/* --------------------------------------------------------------------------
+   4. Tabelas e formulários
+   -------------------------------------------------------------------------- */
+
+/* .tabela-responsiva, table, caption, th e td, fieldset, legend, label e campos */
+
+/* --------------------------------------------------------------------------
+   5. Componentes reutilizáveis (classes)
+   -------------------------------------------------------------------------- */
+
+/* .cartao, .curiosidade, .destaque, .botao, .etiquetas, .acoes e .grelha-projetos */
+
+/* --------------------------------------------------------------------------
+   6. Elementos únicos (id)
+   -------------------------------------------------------------------------- */
+
+/* #formulario-contacto */
+
+/* --------------------------------------------------------------------------
+   7. Ecrãs maiores (media queries)
+   -------------------------------------------------------------------------- */
+
+/* @media (min-width: 768px): títulos maiores, rodapé numa linha e grelha de 2 coluna

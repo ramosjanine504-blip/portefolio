@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os Passadiços do Paiva, em Arouca, e explore as paisagens naturais, trilhos e experiências únicas do Arouca Geopark.">
+    <meta name="author" content="Janine Monteiro" >
+    <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg" >
+    <title>Passadiços do Paiva — Arouca Geopark</title>
+  </head>
+  <body>
+    <header>
+      <h1>Passadiços do Paiva</h1>
+      <p>Um santuário natural na margem esquerda do Rio Paiva, em Arouca, integrado nos territórios distinguidos pela <abbr title="Organização das Nações Unidas para a Educação, a Ciência e a Cultura">UNESCO</abbr>.</p>
+      
+      <nav>
+        <ul>
+          <li><a href="#destaques">destaques</a></li>
+          <li><a href="#normas">normas</a></li>
+          <li><a href="#bilhetes">bilhetes</a></li>
+          <li><a href="#reservas">reservas</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Secção 1: Destaques -->
+      <section id="destaques">
+        <h2>Destaques do percurso</h2>
+        <article>
+          <h3>Garganta do Paiva</h3>
+          <p>Uma garganta escarpada onde o rio corre encaixado entre impressionantes formações de granito e xisto.</p>
+        </article>
+        <article>
+          <h3>Cascata das Aguieiras</h3>
+          <p>Queda de água de esmagadora beleza que desagua no rio Paiva, criando um ambiente único e refrescante.</p>
+        </article>
+      </section>
+
+      <h3>Ponte 516 Arouca</h3>
+          <p>Uma das pontes pedestres suspensas mais longas do mundo, proporcionando uma vista vertiginosa sobre o vale.</p>
+          <aside>
+            <p><strong>Aviso:</strong> O acesso à Ponte 516 Arouca tem idade mínima recomendada de 6 anos e exige precaução para visitantes com acentuadas vertigens.</p>
+          </aside>
+          <article>
+        <main>
+      <section>
+      <h2>Ponte 516 Arouca</h2>
+          <p>Uma das pontes pedestres suspensas mais longas do mundo, proporcionando uma vista vertiginosa sobre o vale.</p>
+          <aside>
+            <p><strong>Aviso:</strong> O acesso à Ponte 516 Arouca tem idade mínima recomendada de 6 anos e exige precaução para visitantes com acentuadas vertigens.</p>
+          </aside>
+        </article>
+      </section>
+<!-- Secção 2: Normas -->
+      <section id="normas">
+        <h2>Normas de Segurança e preservação</h2>
+        <ul>
+          <li>Utilizar calçado e vestuário apropriados para caminhadas em terreno irregular.</li>
+          <li>Respeitar rigorosamente a fauna e a flora protegidas do Geopark.</li>
+          <li>É terminantemente proibido abandonar resíduos ao longo de todo o percurso.</li>
+          <li>Manter o respeito pelos horários e orientações das equipas do parque.</li>
+        </ul>
+      </section>
+          <!-- Secção 3: Tabela de Ingressos -->
+           <section id="bilhetes">
+        <h2>Tabela de ingressos</h2>
+        <table>
+          <caption>Preços oficiais de acesso aos Passadiços do Paiva</caption>
+          <thead>
+            <tr>
+              <th scope="col">Modalidade</th>
+              <th scope="col">Condição / Escalão</th>
+              <th scope="col">Preço Online</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Normal</th>
+              <td>Idades compreendidas entre 18 e 64 anos</td>
+              <td>1,00 € a 2,00 €</td>
+            </tr>
+            <tr>
+              <th scope="row">Estudante / Jovem</th>
+              <td>Mediante exibição de cartão de estudante válido</td>
+              <td>1,00 €</td>
+            </tr>
+            <tr>
+              <th scope="row">Sénior / Infantil</th>
+              <td>Maiores de 65 anos ou crianças até 10 anos</td>
+              <td>Gratuito / Reduzido</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Secção 4: Reserva Online -->
+      <section id="reserva">
+        <h2>Reserva de visita e bilheteira online</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Dados do Responsável</legend>
+
+            <label for="resp-nome">Nome completo:</label>
+            <input type="text" id="resp-nome" name="nome" required minlength="3" />
+
+            <label for="resp-email">Correio eletrónico:</label>
+            <input type="email" id="resp-email" name="email" required />
+
+            <label for="resp-telemovel">Telemóvel:</label>
+            <input type="tel" id="resp-telemovel" name="telemovel" required pattern="[0-9]{9}" title="Introduza exatamente 9 algarismos numéricos." />
+          </fieldset>
+
+          <fieldset>
+            <legend>Agendamento e Modalidade</legend>
+
+            <label for="data-visita">Data da visita:</label>
+            <input type="date" id="data-visita" name="data" required />
+
+            <label for="num-participantes">Número de participantes (máx. 25):</label>
+            <input type="number" id="num-participantes" name="participantes" min="1" max="25" required />
+
+            <label for="modalidade">Modalidade de visita:</label>
+            <select id="modalidade" name="modalidade" required>
+              <option value="">Selecione a modalidade</option>
+              <option value="individual">Individual / Família</option>
+              <option value="grupo">Grupo / Escolar</option>
+              <option value="guiada">Visita Guiada</option>
+            </select>
+
+            <p>Serviços adicionais:</p>
+            <label><input type="checkbox" name="servicos" value="guia" /> Guia especializado</label>
+            <label><input type="checkbox" name="servicos" value="transporte" /> Transporte local</label>
+
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+            <label>
+              <input type="checkbox" name="normas" required />
+              Declaro que li e aceito obrigatoriamente todas as normas de segurança e preservação ambiental.
+            </label>
+          </fieldset>
+
+          <div>
+            <button type="submit">Efetuar Reserva</button>
+            <button type="reset">Limpar Formulário</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Secção 5: Apoio ao Visitante -->
+      <section id="contactos">
+        <h2>Apoio ao visitante</h2>
+        <p><strong>Morada:</strong> Avenida Central de Arouca, 4540-118 Arouca</p>
+        <p><strong>E-mail:</strong> <a href="mailto:info@passadicosdopaiva.pt">info@passadicosdopaiva.pt</a></p>
+        <p>Visite também o <a href="https://dl.ine.pt" target="_blank" rel="noreferrer noopener">Portal Oficial de Turismo</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Município de Arouca. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
+
+
+        

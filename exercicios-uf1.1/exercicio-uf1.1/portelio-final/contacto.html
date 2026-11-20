@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos | Ana Martins</title>
+  <meta name="description" content="Entre em contacto com Ana Martins para propostas de estágio, projetos de desenvolvimento web ou esclarecimento de dúvidas.">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="perfil-header">
+      <img src="imagens/foto.svg" alt="Ilustração do rosto de Ana Martins, a sorrir" width="160" height="160">
+      <div class="perfil-info">
+        <h1>Ana Martins</h1>
+        <p><strong>Futura programadora web</strong>, a aprender a construir sites de raiz.</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contactos.html" class="ativo">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Vamos conversar?</h2>
+      <p>Estou disponível para novas oportunidades de estágio e colaboração a partir de 2027. Podem entrar em contacto comigo através dos seguintes canais:</p>
+      
+      <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li><strong>E-mail:</strong> <a href="mailto:ana.martins@exemplo.pt" style="color: var(--primary-color); text-decoration: none;">ana.martins@exemplo.pt</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/ana-martins-dev" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">github.com/ana-martins-dev</a></li>
+        <li><strong>Localização:</strong> Setúbal, Portugal (disponível para trabalho presencial ou remoto)</li>
+      </ul>
+
+      <div class="caixa-nota">
+        <p><strong>Nota:</strong> Costumo responder a todas as mensagens no prazo máximo de 24 horas úteis.</p>
+      </div>
+    </section>
+
+    <section id="formulario-contacto">
+      <h2>Envie uma mensagem</h2>
+      <p>Se preferir, pode enviar uma mensagem diretamente através do formulário abaixo:</p>
+
+      <form action="#" method="post">
+        
+        <fieldset>
+          <legend>Os seus dados</legend>
+          
+          <div class="grupo-campo">
+            <label for="nome">Nome completo: *</label>
+            <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" placeholder="Ex.: Maria Santos">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">Correio eletrónico: *</label>
+            <input type="email" id="email" name="email" required placeholder="maria.santos@exemplo.pt">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefone">Telefone (opcional):</label>
+            <input type="text" id="telefone" name="telefone" pattern="[0-9]{9}" placeholder="912345678">
+            <div class="ajuda-campo">Indique um contacto telefónico válido com 9 algarismos</div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Motivo do contacto</legend>
+
+          <div class="grupo-campo">
+            <label for="assunto">Assunto principal: *</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">-- Por favor, selecione uma opção --</option>
+              <option value="estagio">Proposta de estágio</option>
+              <option value="projeto">Projeto ou colaboração</option>
+              <option value="duvida">Dúvida ou esclarecimento</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label>Como teve conhecimento do meu portefólio?</label>
+            <div class="radio-grupo">
+              <label class="radio-inline"><input type="radio" name="origem" value="linkedin" checked> LinkedIn</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="github"> GitHub</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="recomendacao"> Recomendação direta</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="outro"> Outro meio</label>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label>Áreas de interesse conjunto:</label>
+            <div class="checkbox-grupo">
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="frontend"> Desenvolvimento Frontend</label>
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="backend"> Desenvolvimento Backend</label>
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="acessibilidade"> Acessibilidade Web</label>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="mensagem">Mensagem detalhada: *</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required minlength="10" maxlength="1000" placeholder="Escreva aqui a sua mensagem..."></textarea>
+          </div>
+
+          <div class="grupo-campo">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="consentimento" required>
+              Autorizo o tratamento destes dados exclusivamente para efeitos de resposta a este contacto. *
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="acoes-grupo">
+          <button type="submit" class="botao">Enviar mensagem</button>
+          <button type="reset" class="botao botao-secundario">Limpar formulário</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Horário de disponibilidade</h2>
+      <p>Os períodos em que estou mais facilmente contactável para reuniões ou conversas informais:</p>
+
+      <table>
+        <caption>Disponibilidade semanal para contacto e reuniões</caption>
+        <thead>
+          <tr>
+            <th>Dias da semana</th>
+            <th>Horário</th>
+            <th>Formato preferencial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda a Sexta</td>
+            <td>09:00 – 18:00</td>
+            <td>E-mail ou videoconferência</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>10:00 – 13:00</td>
+            <td>E-mail</td>
+          </tr>
+          <tr>
+            <td>Domingo</td>
+            <td>Indisponível</td>
+            <td>Descanso semanal</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ana Martins</p>
+    <ul>
+      <li><a href="mailto:ana.martins@exemplo.pt">E-mail</a></li>
+      <li><a href="https://github.com/ana-martins-dev" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos | Ana Martins</title>
+  <meta name="description" content="Entre em contacto com Ana Martins para propostas de estágio, projetos de desenvolvimento web ou esclarecimento de dúvidas.">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="perfil-header">
+      <img src="imagens/foto.svg" alt="Ilustração do rosto de Ana Martins, a sorrir" width="160" height="160">
+      <div class="perfil-info">
+        <h1>Ana Martins</h1>
+        <p><strong>Futura programadora web</strong>, a aprender a construir sites de raiz.</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contactos.html" class="ativo">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Vamos conversar?</h2>
+      <p>Estou disponível para novas oportunidades de estágio e colaboração a partir de 2027. Podem entrar em contacto comigo através dos seguintes canais:</p>
+      
+      <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li><strong>E-mail:</strong> <a href="mailto:ana.martins@exemplo.pt" style="color: var(--primary-color); text-decoration: none;">ana.martins@exemplo.pt</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/ana-martins-dev" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">github.com/ana-martins-dev</a></li>
+        <li><strong>Localização:</strong> Setúbal, Portugal (disponível para trabalho presencial ou remoto)</li>
+      </ul>
+
+      <div class="caixa-nota">
+        <p><strong>Nota:</strong> Costumo responder a todas as mensagens no prazo máximo de 24 horas úteis.</p>
+      </div>
+    </section>
+
+    <section id="formulario-contacto">
+      <h2>Envie uma mensagem</h2>
+      <p>Se preferir, pode enviar uma mensagem diretamente através do formulário abaixo:</p>
+
+      <form action="#" method="post">
+        
+        <fieldset>
+          <legend>Os seus dados</legend>
+          
+          <div class="grupo-campo">
+            <label for="nome">Nome completo: *</label>
+            <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" placeholder="Ex.: Maria Santos">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">Correio eletrónico: *</label>
+            <input type="email" id="email" name="email" required placeholder="maria.santos@exemplo.pt">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefone">Telefone (opcional):</label>
+            <input type="text" id="telefone" name="telefone" pattern="[0-9]{9}" placeholder="912345678">
+            <div class="ajuda-campo">Indique um contacto telefónico válido com 9 algarismos</div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Motivo do contacto</legend>
+
+          <div class="grupo-campo">
+            <label for="assunto">Assunto principal: *</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">-- Por favor, selecione uma opção --</option>
+              <option value="estagio">Proposta de estágio</option>
+              <option value="projeto">Projeto ou colaboração</option>
+              <option value="duvida">Dúvida ou esclarecimento</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label>Como teve conhecimento do meu portefólio?</label>
+            <div class="radio-grupo">
+              <label class="radio-inline"><input type="radio" name="origem" value="linkedin" checked> LinkedIn</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="github"> GitHub</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="recomendacao"> Recomendação direta</label>
+              <label class="radio-inline"><input type="radio" name="origem" value="outro"> Outro meio</label>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label>Áreas de interesse conjunto:</label>
+            <div class="checkbox-grupo">
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="frontend"> Desenvolvimento Frontend</label>
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="backend"> Desenvolvimento Backend</label>
+              <label class="checkbox-inline"><input type="checkbox" name="interesse" value="acessibilidade"> Acessibilidade Web</label>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="mensagem">Mensagem detalhada: *</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required minlength="10" maxlength="1000" placeholder="Escreva aqui a sua mensagem..."></textarea>
+          </div>
+
+          <div class="grupo-campo">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="consentimento" required>
+              Autorizo o tratamento destes dados exclusivamente para efeitos de resposta a este contacto. *
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="acoes-grupo">
+          <button type="submit" class="botao">Enviar mensagem</button>
+          <button type="reset" class="botao botao-secundario">Limpar formulário</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Horário de disponibilidade</h2>
+      <p>Os períodos em que estou mais facilmente contactável para reuniões ou conversas informais:</p>
+
+      <table>
+        <caption>Disponibilidade semanal para contacto e reuniões</caption>
+        <thead>
+          <tr>
+            <th>Dias da semana</th>
+            <th>Horário</th>
+            <th>Formato preferencial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda a Sexta</td>
+            <td>09:00 – 18:00</td>
+            <td>E-mail ou videoconferência</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>10:00 – 13:00</td>
+            <td>E-mail</td>
+          </tr>
+          <tr>
+            <td>Domingo</td>
+            <td>Indisponível</td>
+            <td>Descanso semanal</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ana Martins</p>
+    <ul>
+      <li><a href="mailto:ana.martins@exemplo.pt">E-mail</a></li>
+      <li><a href="https://github.com/ana-martins-dev" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
